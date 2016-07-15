@@ -1,0 +1,328 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="../js/AutoTrRowSpan.js"></script>
+</head>
+<body>
+<div> <!-- Original table div -->
+	<div>
+	  <span>Original</span>
+	  <span style="margin-left:230px;">Result</span>
+	</div>
+ 
+<!-- Orignal table -->
+<table style="border-spacing: 1;border: 2px solid black;float:left;margin-right:20px; " border="1">
+    <thead>
+          <th>Head 1</th>
+          <th>Head 2</th>
+          <th>Head 3</th>
+          <th>Head 4</th>
+    </thead>
+    <tbody>
+		
+      <!-- contents 1 -->
+        <tr>
+        	<td>Contents 1</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>가</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>나</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+    
+        <tr>
+        	<td>Contents 1</td>
+        	<td>나</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>나</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+
+		<!-- contents 2 -->
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>9</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>9</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>B</td>
+        	<td>3</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>B</td>
+        	<td>4</td>
+        </tr>
+    
+        <tr>
+        	<td>Contents 2</td>
+        	<td>나</td>
+        	<td>C</td>
+        	<td>5</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>나</td>
+        	<td>C</td>
+        	<td>6</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>D</td>
+        	<td>7</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>D</td>
+        	<td>8</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>E</td>
+        	<td>9</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>E</td>
+        	<td>10</td>
+        </tr>	
+        
+    </tbody>
+</table>
+
+</div>
+
+
+<div> <!-- Result table div -->
+<!-- Result table -->
+<table style="border-spacing: 1;border: 2px solid black; float:left;" border="1" id="trg_rwspn" class="trg_rwspn">
+    <thead>
+          <th>Head 1</th>
+          <th>Head 2</th>
+          <th>Head 3</th>
+          <th>Head 4</th>
+    </thead>
+    <tbody>
+    
+      <!-- contents 1 -->
+        <tr>
+        	<td>Contents 1</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>가</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>나</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+    
+        <tr>
+        	<td>Contents 1</td>
+        	<td>나</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>나</td>
+        	<td>b</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 1</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>A</td>
+        	<td>1</td>
+        </tr>
+
+		<!-- contents 2 -->
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>9</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>A</td>
+        	<td>9</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>B</td>
+        	<td>3</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>가</td>
+        	<td>B</td>
+        	<td>4</td>
+        </tr>
+    
+        <tr>
+        	<td>Contents 2</td>
+        	<td>나</td>
+        	<td>C</td>
+        	<td>5</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>나</td>
+        	<td>C</td>
+        	<td>6</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>D</td>
+        	<td>7</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>D</td>
+        	<td>8</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>E</td>
+        	<td>9</td>
+        </tr>
+        
+        <tr>
+        	<td>Contents 2</td>
+        	<td>다</td>
+        	<td>E</td>
+        	<td>10</td>
+        </tr>			
+        
+    </tbody>
+</table>
+</div>
+</body>
+</html>
